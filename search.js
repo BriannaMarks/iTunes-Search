@@ -15,18 +15,15 @@ function searchForSong() {
                     var songName = data.results[index].trackName;
                     var songArtist = data.results[index].artistName;
                     var songGenre = data.results[index].primaryGenreName;
-                    //var songPreview = "<audio src='" + data.results[index].previewUrl + "' >";
+                    var songPreview = "<audio controls><source src='" + data.results[index].previewUrl + "' ></audio>";
                     var songAlbumArt = "<img src='"  + data.results[index].artworkUrl100 + "'>";
 
-                    table.append("<tr><td>" + songAlbumArt + "</td><td>" + songName + "</td><td>" + songArtist + "</td><td>" + songGenre + "</td></tr>");
+                    table.append("<tr><td>" + songAlbumArt + "</td><td>" + songName + "</td><td>" + songArtist + "</td><td>" + songGenre + "</td><td>"+ songPreview + "</td></tr>");
                 });
 
 
 
             }
         });
-}
-function displaySongInfo(data) {
-    //"</td><td>" + songPreview +
 }
 
